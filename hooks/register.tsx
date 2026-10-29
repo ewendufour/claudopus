@@ -14,7 +14,7 @@ const DINO = [
   '    █▄  █▄',
 ].join('\n')
 
-const isShown = atom({ plugin: 'claudopus-en', key: 'isShown' } as const, false)
+const isShown = atom({ plugin: 'claudopus', key: 'isShown' } as const, false)
 
 export const register: Register = on => {
   on('session.start', async ($, e, next) => {
