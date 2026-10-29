@@ -19,7 +19,18 @@ const isShown = atom({ plugin: 'claudopus', key: 'isShown' } as const, false)
 export const register: Register = on => {
   on('session.start', async ($, e, next) => {
     const result = await next(e)
-    if (e.isInteractive) await update($, isShown, () => true)
+    if (e.isInteractive) {
+      await update($, isShown, () => true)
+      // Roar in the background: $.audio.play is silent in a Linux terminal,
+      // so try the usual players first, then $.audio.play (macOS).
+      void (async () => {
+        const clip = `${$.plugin.root}/sounds/claudopus-roar.mp3`
+        for (const argv of [['pw-play', clip], ['paplay', clip], ['ffplay', '-nodisp', '-autoexit', '-loglevel', 'quiet', clip]]) {
+          if (await $.process.run(argv).then(r => r.exitCode === 0, () => false)) return
+        }
+        await $.audio.play({ asset: 'sounds/claudopus-roar.mp3' }).catch(() => {})
+      })()
+    }
     return result
   })
 

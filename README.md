@@ -1,6 +1,6 @@
 # claudopus
 
-A Claude Code mod that greets you at the start of each interactive session with a colour pixel-art dinosaur above the prompt, roaring "GRAAAAAAAAA Here's the mighty Claudopus 🦖". The dinosaur goes away as soon as you send your first message.
+A Claude Code mod that greets you at the start of each interactive session with a colour pixel-art dinosaur above the prompt, roaring "GRAAAAAAAAA Here's the mighty Claudopus 🦖". It also plays a synthesized roar (generated from scratch, no third-party audio). The dinosaur goes away as soon as you send your first message.
 
 ## Install
 
