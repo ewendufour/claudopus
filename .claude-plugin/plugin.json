@@ -1,1 +1,1 @@
-{ "name": "claudopus", "version": "0.1.0", "description": "Colour pixel-art dinosaur at startup: Here's the mighty Claudopus", "types": "./types/index.d.ts" }
+{ "name": "claudopus", "version": "0.1.0", "description": "Colour pixel-art dinosaur at startup: Here's the mighty Claudopus", "author": { "name": "Ewen DUFOUR" }, "license": "MIT", "types": "./types/index.d.ts" }
