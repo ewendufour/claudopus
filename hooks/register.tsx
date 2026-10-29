@@ -35,7 +35,7 @@ export const register: Register = on => {
     return (
       <Box flexDirection="column" paddingLeft={3}>
         <Text color="#78e66e" bold>{DINO}</Text>
-        <Text color="#f5f5f5" bold>GRAAAAAAAAH Here's the mighty Claudopus 🦖</Text>
+        <Text color="#f5f5f5" bold>GRAAAAAAAAA Here's the mighty Claudopus 🦖</Text>
       </Box>
     )
   })
